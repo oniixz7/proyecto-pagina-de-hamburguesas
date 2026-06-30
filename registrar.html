@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | BurgerGo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="app-header">
+        <div class="brand-bar">
+            <a class="brand" href="index.html">BurgerGo</a>
+            <p class="brand-copy">Crea tu cuenta para pedir mas rapido.</p>
+        </div>
+        <nav class="main-nav" aria-label="Navegacion principal">
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="ofertas.html">Promociones</a></li>
+                <li><a href="pedidos.html">Mi Carrito <span class="nav-badge">2</span></a></li>
+                <li><a href="login.html">Mi Perfil</a></li>
+                <li><a class="is-active" href="registrar.html">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-shell">
+        
+        <section class="form-card">
+            <p class="eyebrow">Nuevo cliente</p>
+            <h1>Crear cuenta</h1>
+            <form action="#" method="post">
+                <p>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                </p>
+                <p>
+                    <label for="correo-registro">Correo electronico</label>
+                    <input type="email" id="correo-registro" name="correo" placeholder="nombre@correo.com" required>
+                </p>
+                <p>
+                    <label for="telefono">Telefono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="999 999 999">
+                </p>
+                <p>
+                    <label for="direccion">Direccion</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Av. Principal 123">
+                </p>
+                <p>
+                    <label for="clave-registro">Contrasena</label>
+                    <input type="password" id="clave-registro" name="clave" placeholder="Crea una contrasena" required>
+                </p>
+                <p class="form-actions">
+                    <button type="submit">Registrarme</button>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,268 @@
+/* Aplica box-sizing para que padding y border no aumenten el ancho total. */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #222222;
+    margin: 0;
+}
+a {
+    color: #b13a12;
+    text-decoration: none;
+}
+
+.app-header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 12px 16px;
+    z-index: 10;
+}
+
+.brand-bar {
+    max-width: 1000px;
+    margin: 0 auto 10px;
+}
+
+
+.brand {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+
+.brand-copy {
+    margin: 6px 0 0;
+    color: #555555;
+}
+
+
+.main-nav {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.main-nav a {
+    display: inline-block;
+    padding: 10px 14px;
+    background-color: #f1f1f1;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+
+.main-nav a:hover {
+    background-color: #ececec;
+    transform: translateY(-2px);
+}
+
+
+.main-nav .is-active {
+    background-color: #f4b183;
+    border-color: #e28b55;
+    font-weight: bold;
+}
+
+.nav-badge {
+    display: inline-block;
+    min-width: 20px;
+    padding: 2px 6px;
+    margin-left: 4px;
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.page-shell {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 0 16px;
+    display: grid;
+    gap: 20px;
+}
+
+.page-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.hero-card,
+.content-card,
+.form-card {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #666666;
+    text-transform: uppercase;
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+.feature-list {
+    padding-left: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border-radius: 6px;
+}
+
+.page-image {
+    width: 100%;
+    max-height: 580px;
+    object-fit: cover;
+    border: 1px solid #d9d9d9;
+    margin: 12px 0;
+    border-radius: 8px;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border: 1px solid #d9d9d9;
+    margin: 12px 0;
+    border-radius: 8px;
+}
+
+.cta-link,
+button,
+.table-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #e79a68;
+    border: 1px solid #d07b43;
+    color: #ffffff;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-link:hover,
+button:hover,
+.table-link:hover {
+    background-color: #d9864f;
+    transform: translateY(-2px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th,
+td {
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+form p {
+    margin-bottom: 14px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cfcfcf;
+    background-color: #ffffff;
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #d07b43;
+}
+
+.helper-text {
+    color: #555555;
+}
+
+@media (max-width: 768px) {
+
+    .page-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
