@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso | BurgerGo</title>
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+</head>
+<body>
+
+            <header class="app-header">
+            <div class="brand-bar">
+                <i class="brand-icon"></i>
+                <a class="brand" href="index.html">BurgerGO</a>
+            </div>
+            <nav class="main-nav" aria-label="Navegacion principal">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="ofertas.html">OFERTAS</a></li>
+                    <li><a href="carrito.html">CARRITO <span class="nav-badge">0</span></a></li>
+                    <li><a href="login.html" id="nav-profile">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <main class="page-shell">
+        
+        <section class="form-container">
+            <div class="tabs">
+                <button class="tab-btn active" data-target="tab-login">Iniciar Sesión</button>
+                <button class="tab-btn" data-target="tab-registro">Registrarse</button>
+            </div>
+
+            <!-- TAB LOGIN -->
+            <div id="tab-login" class="tab-content active">
+                <p class="eyebrow text-center mb-1">Bienvenido de nuevo</p>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="login-correo">Correo electrónico</label>
+                        <input type="email" id="login-correo" placeholder="nombre@correo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-contrasena">Contraseña</label>
+                        <input type="password" id="login-contrasena" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 2rem;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Entrar a mi cuenta</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TAB REGISTRO -->
+            <div id="tab-registro" class="tab-content">
+                <p class="eyebrow text-center mb-1">Únete a nosotros</p>
+                <form id="registro-form">
+                    <div class="form-group">
+                        <label for="reg-nombre">Nombre completo</label>
+                        <input type="text" id="reg-nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-correo">Correo electrónico</label>
+                        <input type="email" id="reg-correo" placeholder="nombre@correo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-telefono">Teléfono</label>
+                        <input type="tel" id="reg-telefono" placeholder="987654321">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-contrasena">Contraseña</label>
+                        <input type="password" id="reg-contrasena" placeholder="Crea una contraseña" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 2rem;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Crear Cuenta</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

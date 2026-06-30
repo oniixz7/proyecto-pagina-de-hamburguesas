@@ -1,0 +1,37 @@
+/* css/variables.css - Sistema de diseño "BurgerGO" */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+    /* Paleta BurgerGO */
+    --bg-main: #FFFFFF;        /* Fondo general limpio */
+    --bg-header: #FFC000;      /* Amarillo vibrante para header/hero */
+    --bg-card: #FFFFFF;        /* Tarjetas blancas */
+    
+    --text-main: #3D2514;      /* Marrón oscuro para mejor contraste */
+    --text-muted: #7A5C45;
+    
+    --primary: #C82323;        /* Rojo intenso para botones importantes */
+    --primary-hover: #A61A1A;
+    --secondary: #FFC000;      /* Amarillo */
+    
+    /* Tipografía */
+    --font-heading: 'Alfa Slab One', cursive; /* Tipografía bold estilo western/bloque */
+    --font-sans: 'Montserrat', sans-serif;    /* Tipografía limpia para textos */
+    
+    /* Espaciados */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    
+    /* Bordes y Sombras */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    
+    --shadow-soft: 0 10px 20px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.1);
+    
+    /* Transiciones */
+    --transition-fast: 0.2s ease;
+}

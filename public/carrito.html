@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito | BurgerGo</title>
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+</head>
+<body>
+
+            <header class="app-header">
+            <div class="brand-bar">
+                <i class="brand-icon"></i>
+                <a class="brand" href="index.html">BurgerGO</a>
+            </div>
+            <nav class="main-nav" aria-label="Navegacion principal">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="ofertas.html">OFERTAS</a></li>
+                    <li><a href="carrito.html">CARRITO <span class="nav-badge">0</span></a></li>
+                    <li><a href="login.html" id="nav-profile">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <main class="page-shell">
+
+        <section class="form-container" style="max-width: 800px;">
+            <p class="eyebrow">Tu Pedido</p>
+            <h1 class="mb-2">Resumen del Carrito</h1>
+            
+            <div id="cart-container" class="cart-container">
+                <!-- Los items del carrito se cargarán aquí por JS -->
+            </div>
+
+            <div class="cart-summary mb-2">
+                Total: <span id="cart-total">S/ 0.00</span>
+            </div>
+
+            <!-- Formulario de Checkout -->
+            <div id="checkout-form-container" style="display: none; border-top: 1px solid #444; padding-top: 1.5rem; margin-top: 1.5rem;">
+                <h3 class="mb-1">Datos de Entrega</h3>
+                <div class="form-group">
+                    <label for="checkout-direccion">Dirección de Entrega</label>
+                    <input type="text" id="checkout-direccion" placeholder="Ej: Av. Los Libertadores 123" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-pago">Método de Pago</label>
+                    <select id="checkout-pago" style="width: 100%; padding: 0.75rem; border: 1px solid #444; border-radius: var(--radius-sm); background-color: #2a2a2a; color: #fff;">
+                        <option value="Efectivo">Efectivo</option>
+                        <option value="Tarjeta">Tarjeta (POS)</option>
+                        <option value="Yape/Plin">Yape / Plin</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 1.5rem;">
+                <button id="btn-checkout" class="btn btn-primary" style="width: 100%;" disabled>Pagar Pedido</button>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

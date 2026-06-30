@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | BurgerGO</title>
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+
+    <style>
+        /* Hero Section Específico */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-xl) var(--space-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 2rem;
+        }
+
+        .hero-tagline {
+            display: inline-block;
+            border: 2px dashed var(--text-main);
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 0;
+            text-shadow: 3px 3px 0 #fff; /* Efecto contorno blanco */
+        }
+        
+        .hero h1 span {
+            display: block;
+            font-size: 3rem;
+            text-shadow: none;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary);
+            color: #fff;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 3px dashed #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transform: rotate(-15deg);
+        }
+        
+        .hero-badge .number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        .hero-badge .text {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            color: var(--text-main);
+        }
+
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pattern-bg">
+        <header class="app-header">
+            <div class="brand-bar">
+                <i class="brand-icon"></i>
+                <a class="brand" href="index.html">Burger GO</a>
+            </div>
+            <nav class="main-nav" aria-label="Navegacion principal">
+                <ul>
+                    <li><a class="is-active" href="index.html">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="ofertas.html">OFERTAS</a></li>
+                    <li><a href="carrito.html">CARRITO <span class="nav-badge">0</span></a></li>
+                    <li><a href="login.html" id="nav-profile">LOGIN</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="hero-content animate-fade-up">
+                <div class="hero-tagline">It is a good time for the great taste of burgers</div>
+                <h1>SPECIALL<br><span>BURGER</span></h1>
+            </div>
+            <div class="hero-image animate-fade-up" style="animation-delay: 0.2s;">
+                <!-- Usamos una hamburguesa de la base de datos o genérica -->
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Special Burger" style="transform: scale(1.1); filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3)); border-radius: 50%; animation: float 4s ease-in-out infinite;">
+                <div class="hero-badge" style="animation: pulseBadge 2s infinite;">
+                    <span class="number">20%</span>
+                    <span class="text">OFF</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <main class="page-shell">
+        
+        <!-- Banners Promocionales -->
+        <section class="promo-banners">
+            <div class="promo-banner promo-banner-main" style="background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                <div class="promo-content">
+                    <div class="promo-eyebrow">Try it today</div>
+                    <h3 class="promo-title">MOST POPULAR BANNER</h3>
+                </div>
+            </div>
+            <div class="promo-banner" style="background-image: url('https://images.unsplash.com/photo-1594212848116-69f0412803c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                <div class="promo-content">
+                    <div class="promo-eyebrow">Try it today</div>
+                    <h3 class="promo-title">MORE FUN MORE TASTE</h3>
+                </div>
+            </div>
+            <div class="promo-banner" style="background-image: url('https://images.unsplash.com/photo-1586816001966-79b736744398?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                <div class="promo-content">
+                    <div class="promo-eyebrow">Try it today</div>
+                    <h3 class="promo-title">FRESH & CHILI</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos Destacados -->
+        <section class="mb-3">
+            <div class="section-title">
+                <h2>CHOOSE & ENJOY</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+            </div>
+            
+            <div class="grid-products" id="featured-products">
+                <!-- Se llenará vía JS -->
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="menu.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 3rem;">VER TODO EL MENÚ</a>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+    <script type="module">
+        import { api } from './js/api.js';
+        import { ui } from './js/ui.js';
+
+        // Cargar 3 productos destacados en el index
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const productos = await api.getProductos();
+                // Mostrar solo los primeros 3
+                ui.renderProducts(productos.slice(0, 3), 'featured-products', false);
+            } catch (error) {
+                console.error("Error cargando destacados:", error);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* css/layout.css - Estructura principal */
+.app-header {
+    background-color: var(--bg-header);
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Ya no es sticky para que parezca como la imagen original */
+    z-index: 100;
+}
+
+/* Patrón de fondo usando CSS (SVG codificado en URL) */
+.pattern-bg {
+    background-color: var(--bg-header);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e6ad00' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.brand-bar {
+    text-align: center;
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+    /* Un ícono simple de hamburguesa usando svg */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='%233D2514' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 13C22 14.1 21.1 15 20 15H4C2.9 15 2 14.1 2 13C2 11.9 2.9 11 4 11H20C21.1 11 22 11.9 22 13ZM12 3C7.6 3 4 6.6 4 11H20C20 6.6 16.4 3 12 3ZM4 16H20V18H4V16ZM4 19H20C21.1 19 22 19.9 22 21C22 22.1 21.1 23 20 23H4C2.9 23 2 22.1 2 21C2 19.9 2.9 19 4 19Z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.brand-copy {
+    display: none; /* Quitamos el subtítulo viejo del logo */
+}
+
+.main-nav {
+    width: 100%;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-nav a {
+    color: var(--text-main);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    transition: color var(--transition-fast);
+}
+
+.main-nav a:hover, .main-nav a.is-active {
+    color: var(--primary);
+    background-color: transparent;
+}
+
+.nav-badge {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 0.1rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-family: var(--font-sans);
+    margin-left: 0.2rem;
+    vertical-align: top;
+}
+
+/* Mobile First -> Desktop */
+@media (min-width: 900px) {
+    .app-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    
+    .brand-bar {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .main-nav {
+        width: auto;
+        padding-bottom: 0.5rem;
+    }
+}
