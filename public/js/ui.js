@@ -37,7 +37,7 @@ export const ui = {
                     <h3>${producto.nombre}</h3>
                     <p class="product-desc">${producto.descripcion || 'Deliciosa hamburguesa preparada al momento con los mejores ingredientes.'}</p>
                     ${priceHTML}
-                    <button class="btn btn-primary btn-add" style="width: 100%;" data-id="${producto.id}" data-name="${producto.nombre}" data-price="${precioFinal}" data-img="${producto.imagen_url}">ORDER NOW</button>
+                    <button class="btn btn-primary btn-add" style="width: 100%;" data-id="${producto.id}" data-name="${producto.nombre}" data-price="${precioFinal}" data-img="${producto.imagen_url}">ORDENAR !</button>
                 </div>
             `;
             container.appendChild(article);
